@@ -1,5 +1,6 @@
 package com.ticketManagement.model;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -36,4 +37,8 @@ public class Ticket {
  @Schema(description = "Allocated seat in the train")
  @NotBlank
  private Section section;
+ 
+ private LocalDateTime bookedDate=LocalDateTime.now();
+ 
+ private LocalDateTime updatedDate;
 }

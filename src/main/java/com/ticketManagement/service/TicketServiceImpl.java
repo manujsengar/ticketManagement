@@ -1,5 +1,6 @@
 package com.ticketManagement.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -60,7 +61,8 @@ public class TicketServiceImpl implements TicketService {
 
 		ticketRepository.freeSeat(ticket.getSeat()); // Free the old seat
 		ticket.setSeat(newSeat);
-		ticket.setSection(newSeat.charAt(0)=='A'?Section.A:Section.B);//Assign the new seat
+		ticket.setUpdatedDate(LocalDateTime.now());
+		ticket.setSection(newSeat.charAt(0) == 'A' ? Section.A : Section.B);// Assign the new seat
 		ticketRepository.occupySeat(newSeat); // Mark the new seat as occupied
 		logger.info("Seat modified for ticket {}: New seat - {}", ticketId, newSeat);
 	}

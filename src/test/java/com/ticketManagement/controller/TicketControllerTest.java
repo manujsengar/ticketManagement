@@ -38,7 +38,7 @@ class TicketControllerTest {
 
  @Test
  void purchaseTicket_ShouldReturnCreatedTicket() throws Exception {
-     Ticket ticket = new Ticket(null, UUID.randomUUID(), null, new User("John", "Doe", "john.doe@example.com"), 5.0, null, Section.A);
+     Ticket ticket = new Ticket(null, UUID.randomUUID(), null, new User("John", "Doe", "john.doe@example.com"), 5.0, null, Section.A, null);
      when(ticketService.purchaseTicket(any(Ticket.class))).thenReturn(ticket);
      mockMvc.perform(post("/api/tickets/purchase")
              .contentType(MediaType.APPLICATION_JSON)
