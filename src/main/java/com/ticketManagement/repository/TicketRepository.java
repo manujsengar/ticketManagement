@@ -36,6 +36,9 @@ public class TicketRepository {
 		Set<String> availableSeats = section.equals(Section.A) ? sectionASeats : sectionBSeats;
 
 		String seat = availableSeats.stream().findFirst().orElse(null); // Get the first available seat
+		if(seat==null) {
+			throw new RuntimeException("Seat " + section + " is full");
+		}
 		occupySeat(seat);
 		return seat;
 	}
