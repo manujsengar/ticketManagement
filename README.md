@@ -57,9 +57,9 @@ Prerequisites
 {
   "event": "FRANCE",
   "user": {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com"
+    "firstName": "Manuj",
+    "lastName": "Sengar",
+    "email": "manuj.sengar@hotmail.com"
   },
   "price": 5.0,
   "section": "A"
@@ -69,9 +69,9 @@ Prerequisites
   "ticketId": "123e4567-e89b-12d3-a456-426614174000",
   "seat": "A1",
   "user": {
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "john.doe@example.com"
+    "firstName": "Manuj",
+    "lastName": "Sengar",
+    "email": "manuj.sengar@hotmail.com"
   }
 }
 2. Remove a Ticket
@@ -96,9 +96,9 @@ Prerequisites
 [
   {
     "user": {
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "john.doe@example.com"
+      "firstName": "Manuj",
+      "lastName": "Sengar",
+      "email": "manuj.sengar@hotmail.com"
     },
     "seat": "A1"
   }
