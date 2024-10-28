@@ -12,18 +12,31 @@ This is a Ticket Management System built using Spring Boot. It allows users to p
 
 📂 Project Structure
 src
+
 ├── main
+
 │   ├── java
+
 │   │   ├── com.ticketManagement
+
 │   │   │   ├── controller       // REST controllers
+
 │   │   │   ├── model            // Models for Ticket, User, Section
+
 │   │   │   ├── repository       // Repository for managing tickets
+
 │   │   │   ├── service          // Business logic and service classes
+
 │   │   │   └── TicketManagementApplication.java // Main app entry point
+
 │   └── resources
+
 │       └── application.properties // App configurations
+
 ├── test
+
 │   └── java                     // Unit and integration tests
+
 └── README.md                    // Project documentation
 
 🚀 Getting Started
