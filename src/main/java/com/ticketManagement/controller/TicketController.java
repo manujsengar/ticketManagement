@@ -17,6 +17,7 @@ import com.ticketManagement.model.Ticket;
 import com.ticketManagement.service.TicketService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/tickets")
@@ -28,7 +29,7 @@ public class TicketController {
 
 	@Operation(summary = "Purchase a ticket")
 	@PostMapping("/purchase")
-	public Ticket purchaseTicket(@RequestBody Ticket ticket) {
+	public Ticket purchaseTicket(@Valid @RequestBody Ticket ticket) {
 		return ticketService.purchaseTicket(ticket);
 	}
 

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class Ticket {
  private String to;
 
  @Schema(description = "User associated with the ticket")
+ @Valid
  private User user;
 
  @Schema(description = "Price of the ticket")
