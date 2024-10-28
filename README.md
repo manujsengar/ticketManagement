@@ -1,8 +1,10 @@
+
 🎟️ Ticket Management System
 
 This is a Ticket Management System built using Spring Boot. It allows users to purchase tickets, manage seating, and retrieve ticket details. The project uses in-memory storage for tickets and provides simple seat allocation and management by section.
 
 Postman Collection : https://api.postman.com/collections/30303764-4b683b14-f2a0-410b-abd8-98052eaf5992?access_key=PMAT-01JBA635D0BP6GXVZT6Q3RTWZX
+
 🛠️ Features
 
 	•	Purchase Tickets: Automatically allocates the next available seat.
