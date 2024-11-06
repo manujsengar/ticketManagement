@@ -115,8 +115,44 @@ Prerequisites
 	•	Maven
 	•	ConcurrentHashMap (for thread-safe in-memory storage)
 
- 💡 Future Enhancements
+Requirements : 
 
-	•	Add database support (e.g., MySQL, MongoDB) for persistence.
-	•	Implement user authentication and authorization.
-	•	Add seat reservation timeout functionality.
+Functional Requirements:
+
+	1.	Ticket Purchase: Users should be able to purchase a ticket with origin, destination, user details, and price.
+	2.	Seat Allocation: Automatic seat allocation based on sections (A or B) with a limited number of seats.
+	3.	Ticket Details Retrieval: Ability to retrieve ticket details by seat number.
+	4.	User List by Section: List users allocated to specific train sections (A or B).
+	5.	Ticket Cancellation: Remove a ticket and free up the allocated seat.
+	6.	Seat Modification: Change the allocated seat for a user, respecting seat availability.
+
+Non-Functional Requirements:
+
+	1.	Performance: Fast API responses for ticket purchase, retrieval, and modification, especially with high request volumes.
+	2.	Reliability: Ensure consistency in seat allocation and ticket removal operations to prevent data issues.
+	3.	Scalability: In-memory data handling for this app is simple, but future scaling might benefit from using a persistent database.
+	4.	Usability: Clear API documentation for ease of integration, using Swagger annotations for API descriptions.
+	5.	Maintainability: Modular service and repository layers for easy updates and debugging.
+	6.	Security: Basic input validation and secure user data handling, especially for email formats.
+
+
+Improvisations: 
+
+Functional Improvements
+
+	1.	Enhanced Seat Selection: Allow users to pick seats based on preference, such as window or aisle, if available.
+	2.	Real-time Ticket Availability: Display remaining seats in each section to users before booking.
+	3.	Waitlist Feature: Implement a waitlist if sections are full, with notifications if seats open up.
+	4.	Ticket Reservation: Allow users to reserve seats temporarily, holding seats until payment is confirmed.
+
+Non-Functional Improvements
+
+	1.	Scalability: Use load balancing and distributed databases to handle large user volumes.
+	2.	Performance Optimization: Implement caching (e.g., Redis) for frequent data access like seat availability.
+	3.	Enhanced Validation and Security
+	4.	Logging and Monitoring: Enable centralized logging and real-time alerts for issue detection and diagnostics.
+	5.  Persistent Database Integration: Introduce JPA or Hibernate to support relational data and ease future migrations.
+
+
+	
+

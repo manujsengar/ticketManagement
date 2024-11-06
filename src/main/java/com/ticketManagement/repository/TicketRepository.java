@@ -3,6 +3,7 @@ package com.ticketManagement.repository;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.stream.IntStream;
 
@@ -16,8 +17,8 @@ public class TicketRepository {
 	// In-memory storage for tickets
 	private static final Map<String, Ticket> tickets = new ConcurrentHashMap<>();
 	// Track occupied seats for both sections
-	private static final Set<String> sectionASeats = new CopyOnWriteArraySet<>();
-	private static final Set<String> sectionBSeats = new CopyOnWriteArraySet<>();
+	private static final Set<String> sectionASeats = new ConcurrentSkipListSet<>();
+	private static final Set<String> sectionBSeats = new ConcurrentSkipListSet<>();
 
 	// Initialize seat availability (72 seats in each section)
 	public TicketRepository() {
